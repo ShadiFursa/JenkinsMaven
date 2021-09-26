@@ -13,9 +13,10 @@ pipeline{
 			}
 
 		}
-		stage('Run Project'){
+		stage('Run Project - tests'){
 			steps{
 				junit '**/target/surefire-reports/TEST-*.xml'
+
 			}
 		}
 	}
