@@ -13,6 +13,11 @@ pipeline{
 			}
 
 		}
+		stage('Run Project'){
+			steps{
+				junit '**/target/surefire-reports/TEST-*.xml'
+			}
+		}
 	}
 }
 
