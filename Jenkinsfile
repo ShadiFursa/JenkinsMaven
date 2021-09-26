@@ -9,8 +9,9 @@ pipeline{
 		stage('Build project'){
 			steps{
 				
-				sh '-Dmaven.test.failure=true clean package'
+				sh 'mvn -B -ntp -Dmaven.test.failure.ignore verify'
 			}
+
 		}
 	}
 }
